@@ -7,4 +7,13 @@ def main():
    contents = get_book_text("books/frankenstein.txt")
    print(contents)
 
-main()
+def count_words(text_string):
+   text_list = text_string.split()
+   i = 0
+   for word in text_list:
+      i += 1
+   return i
+
+text = get_book_text("books/frankenstein.txt")
+num_words = count_words(text)
+print (f"{num_words} words found in the document")
