@@ -17,3 +17,17 @@ def count_chars(string):
          dic[char] = 1
 
    return dic
+
+def make_list(dic):
+   new_list = []
+   for char in dic:
+      local_dict = {}
+      local_dict["char"] = char
+      local_dict["num"] = dic[char]
+      new_list.append(local_dict)
+
+   def sort_on(dic):
+      return dic["num"]
+
+   new_list.sort(reverse=True, key=sort_on)
+   return new_list
